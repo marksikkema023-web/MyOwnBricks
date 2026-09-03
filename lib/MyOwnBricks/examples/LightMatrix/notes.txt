@@ -1,0 +1,23 @@
+Mode	Name	Purpose
+0	COL_O	Individual LED control	9x DATA8
+1	PIXEL	Set individual pixel	9x DATA8
+2	FRAME	Send full 3×3 bitmap	9x DATA8
+3	TEXT	Display characters	DATA8
+4	WRITE	General write command	DATA8
+
+from pybricks.pupdevices import ColorLightMatrix
+from pybricks.parameters import Color, Port
+
+# Initialize the matrix on port A
+matrix = ColorLightMatrix(Port.A)
+
+# Set all 9 lights to red
+matrix.on(Color.RED)
+
+# Set each of the 9 pixels to a specific color
+matrix.on([Color.RED, Color.BLUE, Color.GREEN, 
+           Color.YELLOW, Color.RED, Color.BLUE,
+           Color.GREEN, Color.YELLOW, Color.RED])
+
+# Turn it off
+matrix.off()
