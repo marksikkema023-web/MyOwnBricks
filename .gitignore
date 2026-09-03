@@ -1,5 +1,15 @@
-.coverage
-__pycache__/*
-*swp
-*.pyc
-*.pro*
+# PlatformIO build output & workspace state
+.pio/
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+
+# Toolchain build artifacts
+*.hex
+*.bin
+*.elf
+*.o
+*.d
+
+# OS-generated files
+.DS_Store
+Thumbs.db
